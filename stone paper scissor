@@ -1,0 +1,48 @@
+import random
+print(" \t\t\t stone scissor paper game")
+us = 0 #us= user score
+cs = 0 #cs= computer score
+char = ["stone", "scissor", "paper"]
+
+while True:
+    user = input("enter stone, scissor or paper: ")
+    com = random.choice(char)
+    
+    if user == "stone" and com == "paper":
+        print("computer win!!")
+        cs+=1 #cs=cs+1
+    elif user == "stone" and com == "scissor":
+        print("user win!!")
+        us+=1
+    elif user == "stone" and com == "stone":
+        print("match tie!!")
+    elif user == "paper" and com == "paper":
+        print("match tie!!")
+    elif user == "paper" and com == "scissor":
+        print("computer win!!")
+        cs+=1
+    elif user == "paper" and com == "stone":
+        print("user win!!")
+        us+=1
+    elif user == "scissor" and com == "paper":
+        print("user win!!")
+        us+=1
+    elif user == "scissor" and com == "scissor":
+        print("match tie!!")
+    elif user == "scissor" and com == "stone":
+        print("computer win!!")
+        cs+=1
+    elif user == "exit":
+        break
+    else:
+        print("please enter stone, paper or scissor")
+
+print ("user final score is:",us)
+print ("computer final score is:",cs)
+if us>cs:
+    print("user win")
+elif us==cs:
+    print("tie")
+else:
+    print("computer win")
+    
